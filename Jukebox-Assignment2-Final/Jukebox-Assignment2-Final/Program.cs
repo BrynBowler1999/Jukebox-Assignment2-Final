@@ -16,7 +16,7 @@ namespace Jukebox_Assignment2_Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new form_Jukebox());
         }
     }
 }
