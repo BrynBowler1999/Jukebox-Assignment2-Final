@@ -91,7 +91,11 @@ namespace Jukebox_Assignment2_Final
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            string applicationPath = Directory.GetCurrentDirectory() + "//";
 
+            StreamWriter myOutputStream = File.CreateText(applicationPath + (textbox_GenraTitle.Text) + ".txt");
+
+            myOutputStream.Close();
         }
     }
 }
