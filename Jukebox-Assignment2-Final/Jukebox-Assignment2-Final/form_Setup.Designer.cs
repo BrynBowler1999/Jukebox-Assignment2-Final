@@ -74,6 +74,7 @@
             this.btn_DeleteTrack.TabIndex = 2;
             this.btn_DeleteTrack.Text = "Delete Track From Genra";
             this.btn_DeleteTrack.UseVisualStyleBackColor = true;
+            this.btn_DeleteTrack.Click += new System.EventHandler(this.btn_DeleteTrack_Click);
             // 
             // listbox_Import
             // 
@@ -126,6 +127,7 @@
             this.btn_Add.TabIndex = 8;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Delete
             // 

@@ -80,5 +80,18 @@ namespace Jukebox_Assignment2_Final
                 listbox_GenraTracks.Items.Add(listbox_Import.Text);
             }
         }
+
+        private void btn_DeleteTrack_Click(object sender, EventArgs e)
+        {
+            string RemovedItem;
+            RemovedItem = (listbox_GenraTracks.Text);
+
+            listbox_GenraTracks.Items.Remove(RemovedItem);
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
