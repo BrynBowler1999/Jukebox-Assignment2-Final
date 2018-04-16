@@ -55,5 +55,30 @@ namespace Jukebox_Assignment2_Final
                 }
             }
         }
+
+        private void btn_ClearImportedTracks_Click(object sender, EventArgs e)
+        {
+            listbox_Import.Items.Clear();
+        }
+
+        private void btn_MoveTrack_Click(object sender, EventArgs e)
+        {
+            if (listbox_Import.Text != "")
+            {
+                string MovedItem;
+                MovedItem = (listbox_Import.Text);
+
+                listbox_GenraTracks.Items.Add(listbox_Import.Text);
+                listbox_Import.Items.Remove(MovedItem);
+            }
+        }
+
+        private void button_CopyTrack_Click(object sender, EventArgs e)
+        {
+            if (listbox_Import.Text != "")
+            {
+                listbox_GenraTracks.Items.Add(listbox_Import.Text);
+            }
+        }
     }
 }

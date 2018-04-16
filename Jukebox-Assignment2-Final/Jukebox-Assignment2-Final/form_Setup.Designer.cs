@@ -54,6 +54,7 @@
             this.button_CopyTrack.TabIndex = 0;
             this.button_CopyTrack.Text = "Copy Track >>";
             this.button_CopyTrack.UseVisualStyleBackColor = true;
+            this.button_CopyTrack.Click += new System.EventHandler(this.button_CopyTrack_Click);
             // 
             // btn_MoveTrack
             // 
@@ -63,6 +64,7 @@
             this.btn_MoveTrack.TabIndex = 1;
             this.btn_MoveTrack.Text = "Move Track >>";
             this.btn_MoveTrack.UseVisualStyleBackColor = true;
+            this.btn_MoveTrack.Click += new System.EventHandler(this.btn_MoveTrack_Click);
             // 
             // btn_DeleteTrack
             // 
@@ -99,6 +101,7 @@
             this.btn_ClearImportedTracks.TabIndex = 5;
             this.btn_ClearImportedTracks.Text = "Clear Imported Tracks";
             this.btn_ClearImportedTracks.UseVisualStyleBackColor = true;
+            this.btn_ClearImportedTracks.Click += new System.EventHandler(this.btn_ClearImportedTracks_Click);
             // 
             // listbox_GenraTracks
             // 
