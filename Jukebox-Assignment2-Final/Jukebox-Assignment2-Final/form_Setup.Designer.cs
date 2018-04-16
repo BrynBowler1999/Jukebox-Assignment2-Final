@@ -210,6 +210,7 @@
             this.Controls.Add(this.button_CopyTrack);
             this.Name = "form_Setup";
             this.Text = "Setup";
+            this.Load += new System.EventHandler(this.form_Setup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
