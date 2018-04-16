@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Jukebox_Assignment2_Final
 {
@@ -33,6 +34,26 @@ namespace Jukebox_Assignment2_Final
         private void form_Setup_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ImportFromDirectory_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                string[] files = Directory.GetFiles(FBD.SelectedPath);
+                string[] dirs = Directory.GetDirectories(FBD.SelectedPath);
+
+                foreach (string file in files)
+                {
+                    listbox_Import.Items.Add(Path.GetFileName(file));
+                }
+                foreach (string dir in dirs)
+                {
+                    listbox_Import.Items.Add(Path.GetFileName(dir));
+                }
+            }
         }
     }
 }

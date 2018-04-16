@@ -89,6 +89,7 @@
             this.btn_ImportFromDirectory.TabIndex = 4;
             this.btn_ImportFromDirectory.Text = "Import Tracks From Directory";
             this.btn_ImportFromDirectory.UseVisualStyleBackColor = true;
+            this.btn_ImportFromDirectory.Click += new System.EventHandler(this.btn_ImportFromDirectory_Click);
             // 
             // btn_ClearImportedTracks
             // 
