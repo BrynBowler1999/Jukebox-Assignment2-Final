@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MyDialogs;
 
 namespace Jukebox_Assignment2_Final
 {
@@ -91,11 +92,32 @@ namespace Jukebox_Assignment2_Final
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            string applicationPath = Directory.GetCurrentDirectory() + "//";
+            if (textbox_GenraTitle.Text == "")
+            {
+                MessageBox.Show("You must enter a Genra Title");
+            }
 
-            StreamWriter myOutputStream = File.CreateText(applicationPath + (textbox_GenraTitle.Text) + ".txt");
+            if (textbox_GenraTitle.Text != "")
+            {
+                string applicationPath = Directory.GetCurrentDirectory() + "//";
 
-            myOutputStream.Close();
+                StreamWriter myTracksStream = File.AppendText(applicationPath + "GenraTracks.txt");
+                StreamWriter myTitleStream = File.AppendText(applicationPath + "GenraTitle.txt");
+
+                string[] Tracks = listbox_GenraTracks.Items.OfType<string>().ToArray();
+
+
+                foreach (string Values in Tracks)
+                {
+                    myTracksStream.WriteLine(Values);
+                }
+
+                myTitleStream.WriteLine(textbox_GenraTitle.Text);
+
+                myTitleStream.Close();
+                myTracksStream.Close();
+            }
+            
         }
     }
 }
