@@ -30,5 +30,36 @@ namespace Jukebox_Assignment2_Final
             }
             Setup.Show();
         }
+
+        private void form_Jukebox_Load(object sender, EventArgs e)
+        {
+            timer_Queue.Start();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            string applicationPath = Directory.GetCurrentDirectory() + "\\";
+
+            listbox_Genra.DataSource = File.ReadAllLines(applicationPath + "GenraTracks.txt");
+        }
+
+        private void listbox_Genra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listbox_Queue.Items.Add(listbox_Genra.SelectedItem);
+        }
+
+        private void timer_Queue_Tick(object sender, EventArgs e)
+        {
+            if (textbox_CurrentSong.Text == "")
+            {
+                if (listbox_Queue.Items.Count > 0)
+                {
+                    string SongName = listbox_Queue.Items[0].ToString();
+                    textbox_CurrentSong.Text = SongName;
+                    timer_Queue.Stop();
+                    listbox_Queue.Items.RemoveAt(0);
+                }
+            }
+        }
     }
 }

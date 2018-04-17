@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Jukebox));
             this.button_Setup = new System.Windows.Forms.Button();
             this.button_About = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@
             this.label_Copyright = new System.Windows.Forms.Label();
             this.player_Music = new AxWMPLib.AxWindowsMediaPlayer();
             this.hscrollbar_Genra = new System.Windows.Forms.HScrollBar();
+            this.timer_Queue = new System.Windows.Forms.Timer(this.components);
+            this.btn_Refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.player_Music)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +79,7 @@
             this.listbox_Genra.Name = "listbox_Genra";
             this.listbox_Genra.Size = new System.Drawing.Size(161, 69);
             this.listbox_Genra.TabIndex = 3;
+            this.listbox_Genra.SelectedIndexChanged += new System.EventHandler(this.listbox_Genra_SelectedIndexChanged);
             // 
             // textbox_GenraTitle
             // 
@@ -119,6 +123,20 @@
             this.hscrollbar_Genra.Size = new System.Drawing.Size(161, 17);
             this.hscrollbar_Genra.TabIndex = 8;
             // 
+            // timer_Queue
+            // 
+            this.timer_Queue.Interval = 1000;
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Location = new System.Drawing.Point(162, 478);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_Refresh.TabIndex = 9;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // form_Jukebox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +145,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(393, 605);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.hscrollbar_Genra);
             this.Controls.Add(this.player_Music);
             this.Controls.Add(this.label_Copyright);
@@ -156,6 +175,8 @@
         private System.Windows.Forms.Label label_Copyright;
         private AxWMPLib.AxWindowsMediaPlayer player_Music;
         private System.Windows.Forms.HScrollBar hscrollbar_Genra;
+        private System.Windows.Forms.Timer timer_Queue;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }
 
