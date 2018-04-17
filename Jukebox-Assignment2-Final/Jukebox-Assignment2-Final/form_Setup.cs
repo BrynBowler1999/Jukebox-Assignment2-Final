@@ -117,7 +117,16 @@ namespace Jukebox_Assignment2_Final
                 myTitleStream.Close();
                 myTracksStream.Close();
             }
-            
+        }
+        
+        private void btn_Ok_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

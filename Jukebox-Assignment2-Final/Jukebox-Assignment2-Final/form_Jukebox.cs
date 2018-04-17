@@ -16,7 +16,10 @@ namespace Jukebox_Assignment2_Final
         public form_Jukebox()
         {
             InitializeComponent();
+            player_Music.Hide();
         }
+
+        bool PlayingSong = false;
 
         private void button_Setup_Click(object sender, EventArgs e)
         {

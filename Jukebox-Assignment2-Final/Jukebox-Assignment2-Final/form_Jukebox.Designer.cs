@@ -36,9 +36,9 @@
             this.textbox_GenraTitle = new System.Windows.Forms.TextBox();
             this.textbox_CurrentSong = new System.Windows.Forms.TextBox();
             this.label_Copyright = new System.Windows.Forms.Label();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.player_Music = new AxWMPLib.AxWindowsMediaPlayer();
             this.hscrollbar_Genra = new System.Windows.Forms.HScrollBar();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player_Music)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Setup
@@ -103,14 +103,14 @@
             this.label_Copyright.TabIndex = 6;
             this.label_Copyright.Text = "Copyright © 2018 Bryn Bowler";
             // 
-            // axWindowsMediaPlayer1
+            // player_Music
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 12);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(214, 46);
-            this.axWindowsMediaPlayer1.TabIndex = 7;
+            this.player_Music.Enabled = true;
+            this.player_Music.Location = new System.Drawing.Point(12, 12);
+            this.player_Music.Name = "player_Music";
+            this.player_Music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_Music.OcxState")));
+            this.player_Music.Size = new System.Drawing.Size(214, 46);
+            this.player_Music.TabIndex = 7;
             // 
             // hscrollbar_Genra
             // 
@@ -128,7 +128,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(393, 605);
             this.Controls.Add(this.hscrollbar_Genra);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.player_Music);
             this.Controls.Add(this.label_Copyright);
             this.Controls.Add(this.textbox_CurrentSong);
             this.Controls.Add(this.textbox_GenraTitle);
@@ -139,7 +139,7 @@
             this.DoubleBuffered = true;
             this.Name = "form_Jukebox";
             this.Text = "Jukebox";
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player_Music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +154,7 @@
         private System.Windows.Forms.TextBox textbox_GenraTitle;
         private System.Windows.Forms.TextBox textbox_CurrentSong;
         private System.Windows.Forms.Label label_Copyright;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer player_Music;
         private System.Windows.Forms.HScrollBar hscrollbar_Genra;
     }
 }
