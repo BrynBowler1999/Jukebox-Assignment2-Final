@@ -97,7 +97,7 @@ namespace Jukebox_Assignment2_Final
 
         private void button_About_Click(object sender, EventArgs e)
         {
-            form_About About = new form_About();
+            About About = new About();
             if (About.ShowDialog() == DialogResult.OK)
             {
                 listbox_Genra.Text = form_Setup.GetFiles;
