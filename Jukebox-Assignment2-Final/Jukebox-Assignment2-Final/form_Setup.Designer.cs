@@ -164,6 +164,7 @@
             this.btn_Cancel.TabIndex = 12;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Ok
             // 
@@ -173,6 +174,7 @@
             this.btn_Ok.TabIndex = 13;
             this.btn_Ok.Text = "Ok";
             this.btn_Ok.UseVisualStyleBackColor = true;
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
             // label_PresentGenra
             // 

@@ -41,6 +41,7 @@
             this.hscrollbar_Genra = new System.Windows.Forms.HScrollBar();
             this.timer_Queue = new System.Windows.Forms.Timer(this.components);
             this.btn_Refresh = new System.Windows.Forms.Button();
+            this.timer_Play = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.player_Music)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             this.textbox_GenraTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.textbox_GenraTitle.Location = new System.Drawing.Point(118, 178);
             this.textbox_GenraTitle.Name = "textbox_GenraTitle";
+            this.textbox_GenraTitle.ReadOnly = true;
             this.textbox_GenraTitle.Size = new System.Drawing.Size(161, 20);
             this.textbox_GenraTitle.TabIndex = 4;
             this.textbox_GenraTitle.Text = "Genra";
@@ -95,6 +97,7 @@
             this.textbox_CurrentSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.textbox_CurrentSong.Location = new System.Drawing.Point(101, 273);
             this.textbox_CurrentSong.Name = "textbox_CurrentSong";
+            this.textbox_CurrentSong.ReadOnly = true;
             this.textbox_CurrentSong.Size = new System.Drawing.Size(191, 20);
             this.textbox_CurrentSong.TabIndex = 5;
             // 
@@ -126,6 +129,7 @@
             // timer_Queue
             // 
             this.timer_Queue.Interval = 1000;
+            this.timer_Queue.Tick += new System.EventHandler(this.timer_Queue_Tick);
             // 
             // btn_Refresh
             // 
@@ -136,6 +140,10 @@
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
+            // timer_Play
+            // 
+            this.timer_Play.Interval = 1000;
             // 
             // form_Jukebox
             // 
@@ -158,6 +166,7 @@
             this.DoubleBuffered = true;
             this.Name = "form_Jukebox";
             this.Text = "Jukebox";
+            this.Load += new System.EventHandler(this.form_Jukebox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.player_Music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,6 +186,7 @@
         private System.Windows.Forms.HScrollBar hscrollbar_Genra;
         private System.Windows.Forms.Timer timer_Queue;
         private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.Timer timer_Play;
     }
 }
 

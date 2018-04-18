@@ -20,6 +20,7 @@ namespace Jukebox_Assignment2_Final
         private void button_OK_Click(object sender, EventArgs e)
         {
             this.Close();
+            //Simply closes the Form
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Jukebox_Assignment2_Final
 {
@@ -20,6 +21,7 @@ namespace Jukebox_Assignment2_Final
         }
 
         bool PlayingSong = false;
+        string applicationPath = Directory.GetCurrentDirectory() + "\\";
 
         private void button_Setup_Click(object sender, EventArgs e)
         {
@@ -59,6 +61,31 @@ namespace Jukebox_Assignment2_Final
                     timer_Queue.Stop();
                     listbox_Queue.Items.RemoveAt(0);
                 }
+            }
+
+            if (PlayingSong == false)
+            {
+                timer_Queue.Start();
+                if (textbox_CurrentSong.Text != "")
+                {
+                    WMPLib.WindowsMediaPlayer player_Music = new WMPLib.WindowsMediaPlayer();
+                    player_Music.URL = (applicationPath + "//Tracks/" + textbox_CurrentSong.Text);
+                    player_Music.controls.play();
+                    timer_Queue.Stop();
+                }
+            }
+        }
+
+        private void timer_Play_Tick(object sender, EventArgs e)
+        {
+            if (PlayingSong == true)
+            {
+                timer_Play.Start();
+                if (textbox_CurrentSong.Text == "")
+                {
+                    textbox_CurrentSong.Clear();
+                }
+                timer_Play.Stop();
             }
         }
     }
