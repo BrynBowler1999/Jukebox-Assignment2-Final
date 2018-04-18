@@ -62,6 +62,7 @@
             this.button_About.TabIndex = 1;
             this.button_About.Text = "About";
             this.button_About.UseVisualStyleBackColor = true;
+            this.button_About.Click += new System.EventHandler(this.button_About_Click);
             // 
             // listbox_Queue
             // 
