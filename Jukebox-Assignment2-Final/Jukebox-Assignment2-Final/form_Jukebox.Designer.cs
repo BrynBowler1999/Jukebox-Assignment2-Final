@@ -41,7 +41,6 @@
             this.hscrollbar_Genra = new System.Windows.Forms.HScrollBar();
             this.timer_Queue = new System.Windows.Forms.Timer(this.components);
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.timer_Play = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.player_Music)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,10 +140,6 @@
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // timer_Play
-            // 
-            this.timer_Play.Interval = 1000;
-            // 
             // form_Jukebox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,7 +181,6 @@
         private System.Windows.Forms.HScrollBar hscrollbar_Genra;
         private System.Windows.Forms.Timer timer_Queue;
         private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.Timer timer_Play;
     }
 }
 
